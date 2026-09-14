@@ -1,0 +1,25 @@
+{
+  "name": "project_02_urlshort",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/maskman0710/Nodejs-series#readme",
+  "bugs": {
+    "url": "https://github.com/maskman0710/Nodejs-series/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maskman0710/Nodejs-series.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongodb": "^7.6.0",
+    "mongoose": "^9.10.0"
+  }
+}
