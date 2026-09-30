@@ -1,9 +1,15 @@
 const express = require('express')
 const app = express()
 const env = require('dotenv')
+const cors = require('cors')
 env.config()
 const {dbconnect} = require('./Connections/db.connect')
 const {signupuser , loginuser} = require('./Routes/user.route')
+
+app.use(cors({
+    origin: process.env.origin,
+    Credential: true
+}))
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
