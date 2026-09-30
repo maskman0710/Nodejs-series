@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended:true}))
 const startserver = async() =>{
     try {    
     
-    const mongoconnect = await dbconnect(process.env.mongo_URI)
+    const mongoconnect = await dbconnect(process.env.Mongo_URI)
 
         app.use('/user/signup' , signupuser)
         app.use('/user/login' , loginuser)

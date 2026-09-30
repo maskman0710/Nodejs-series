@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken')
 
 
 const generatetoken = (userId) => {
-    let secretkey = expense_secret_key
+    let secretkey = process.env.jwtsecretkey
     let data = {
         userId : userId
     }
