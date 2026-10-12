@@ -1,4 +1,3 @@
-const mongo = require('mongoose')
 const passhash = require('bcrypt')
 const {user} = require('../Models/user.model')
 const saltround = 10
