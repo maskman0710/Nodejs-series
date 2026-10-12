@@ -1,7 +1,8 @@
 const {expense} = require('../Models/expense.model')
 
 const creatingexpense = async(creds , userID) => {
-    const expenses = await expense.create({
+    try {
+        const expenses = await expense.create({
         title : creds.title,
         amount : creds.amount,
         category : creds.category,
@@ -9,6 +10,10 @@ const creatingexpense = async(creds , userID) => {
         user : userID
     })
     return expenses
+    } catch (error) {
+        console.log(error.message)
+        console.log("error gerring expense service")
+    }
 }
 
 module.exports = {

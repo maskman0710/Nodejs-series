@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const env = require('dotenv')
 const cors = require('cors')
+const {expenserouter} = require('./Routes/expense.route')
 const cookieparser = require('cookie-parser')
 env.config()
 const {dbconnect} = require('./Connections/db.connect')
@@ -24,6 +25,7 @@ const startserver = async() =>{
         app.use('/user/' , signupuser)
         app.use('/user/' , loginuser)
         app.use('/user/' , fetchuser)
+        app.use('/api/' , expenserouter)
 
     app.listen(process.env.port , ()=>{
     console.log("Server has started succesfully")
